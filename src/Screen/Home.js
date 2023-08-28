@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
-import {SafeAreaView, Text, View} from 'react-native';
+import React, {useRef, useState} from 'react';
+import {Button, SafeAreaView, Text, View} from 'react-native';
 import CardList from '../Components/CardList';
+import style from '../Components/common/styles/style';
 
 export default function Home() {
   const [cardlist, setCardList] = useState([
@@ -40,6 +41,48 @@ export default function Home() {
       price: 12500,
       rating: 4,
     },
+    {
+      img: '',
+      address: 'amritsar',
+      description: 'ei hahiluhfiluahsf h l lh',
+      price: 12500,
+      rating: 4,
+    },
+    {
+      img: '',
+      address: 'amritsar',
+      description: 'ei hahiluhfiluahsf h l lh',
+      price: 12500,
+      rating: 4,
+    },
+    {
+      img: '',
+      address: 'amritsar',
+      description: 'ei hahiluhfiluahsf h l lh',
+      price: 12500,
+      rating: 4,
+    },
+    {
+      img: '',
+      address: 'amritsar',
+      description: 'ei hahiluhfiluahsf h l lh',
+      price: 12500,
+      rating: 4,
+    },
+    {
+      img: '',
+      address: 'amritsar',
+      description: 'ei hahiluhfiluahsf h l lh',
+      price: 12500,
+      rating: 4,
+    },
+    {
+      img: '',
+      address: 'amritsar',
+      description: 'ei hahiluhfiluahsf h l lh',
+      price: 12500,
+      rating: 4,
+    },
   ]);
 
   return (
@@ -52,6 +95,7 @@ export default function Home() {
         width: '100%',
       }}>
       <Text style={{fontSize: 20, color: '#ffa115'}}>Our Homes</Text>
+
       <View>
         <CardList cardlist={cardlist} />
       </View>

@@ -3,9 +3,9 @@ import {Alert, Text, View} from 'react-native';
 import style from '../Components/common/styles/style';
 import PropTypes from 'prop-types';
 import MyText from './common/Assignments/Section4';
-export default function Card({card}) {
+export default function Card(props) {
   useEffect(() => {
-    console.log('props --- ', card);
+    console.log('props --- ', props);
   }, []);
 
   const handleAddress = () => {
@@ -25,12 +25,12 @@ export default function Card({card}) {
         },
       ]}>
       <Text onPress={() => handleAddress()} style={style.text}>
-        Address: {card?.address}
+        Address: {props?.card?.address}
       </Text>
-      <Text>Price: {card?.price}</Text>
-      <Text>Rating: {card?.rating}/5</Text>
-      <Text>Description: {card?.description}</Text>
-      <MyText text={'id :'} />
+      <Text>Price: {props?.card?.price}</Text>
+      <Text>Rating: {props?.card?.rating}/5</Text>
+      <Text>Description: {props?.card?.description}</Text>
+      <MyText text={`id : ${props?.id}`} />
     </View>
   );
 }

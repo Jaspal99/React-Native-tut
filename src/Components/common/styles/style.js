@@ -7,5 +7,12 @@ const style = StyleSheet.create({
   textRed: {
     color: 'red',
   },
+  sideBySide: {
+    flexDirection: 'row',
+  },
+  buttonStyle: {
+    backgroundColor: '#ffa115 !important',
+    color: 'black !important',
+  },
 });
 export default style;

@@ -1,7 +1,8 @@
-import React, {useRef, useState} from 'react';
+import React, {useContext, useRef, useState} from 'react';
 import {Button, SafeAreaView, Text, View} from 'react-native';
 import CardList from '../Components/CardList';
 import style from '../Components/common/styles/style';
+import {ThemeContext} from '../Components/common/Context/ThemeContext';
 
 export default function Home() {
   const [cardlist, setCardList] = useState([
@@ -85,13 +86,14 @@ export default function Home() {
     },
   ]);
 
+  const isDarkMode = useContext(ThemeContext);
   return (
     <View
       style={{
         display: 'flex',
         alignItems: 'center',
         padding: '5%',
-        backgroundColor: '#282828',
+        backgroundColor: isDarkMode ? '#282828' : 'white',
         width: '100%',
       }}>
       <Text style={{fontSize: 20, color: '#ffa115'}}>Our Homes</Text>

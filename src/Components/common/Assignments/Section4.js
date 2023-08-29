@@ -9,7 +9,7 @@ export default function MyText({text}) {
 
   return (
     <View>
-      <Text style={style.textRed}>{text}</Text>
+      <Text style={style.textGold}>{text}</Text>
     </View>
   );
 }

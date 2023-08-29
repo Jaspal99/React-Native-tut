@@ -1,8 +1,9 @@
-import React, {useEffect} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {Alert, Text, View} from 'react-native';
 import style from '../Components/common/styles/style';
 import PropTypes from 'prop-types';
 import MyText from './common/Assignments/Section4';
+import {ThemeContext} from './common/Context/ThemeContext';
 export default function Card(props) {
   useEffect(() => {
     console.log('props --- ', props);
@@ -12,11 +13,13 @@ export default function Card(props) {
     alert('The text was pressed');
   };
 
+  const isDarkMode = useContext(ThemeContext);
   return (
     <View
       style={[
         {
-          backgroundColor: 'white',
+          backgroundColor: isDarkMode ? 'black' : 'white',
+          color: isDarkMode ? 'white' : 'black',
           width: 300,
           borderRadius: 2.5,
           margin: 2,
@@ -24,13 +27,21 @@ export default function Card(props) {
           alignItems: 'flex-start',
         },
       ]}>
-      <Text onPress={() => handleAddress()} style={style.text}>
+      <Text
+        onPress={() => handleAddress()}
+        style={isDarkMode ? style.whiteText : style.blackText}>
         Address: {props?.card?.address}
       </Text>
-      <Text>Price: {props?.card?.price}</Text>
-      <Text>Rating: {props?.card?.rating}/5</Text>
-      <Text>Description: {props?.card?.description}</Text>
-      <MyText text={`id : ${props?.id}`} />
+      <Text style={isDarkMode ? style.whiteText : style.blackText}>
+        Price: {props?.card?.price}
+      </Text>
+      <Text style={isDarkMode ? style.whiteText : style.blackText}>
+        Rating: {props?.card?.rating}/5
+      </Text>
+      <Text style={isDarkMode ? style.whiteText : style.blackText}>
+        Description: {props?.card?.description}
+      </Text>
+      <MyText text={`id : ${props?.id + 1}`} />
     </View>
   );
 }

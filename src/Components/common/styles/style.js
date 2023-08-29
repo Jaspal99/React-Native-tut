@@ -4,8 +4,8 @@ const style = StyleSheet.create({
   text: {
     color: 'blue',
   },
-  textRed: {
-    color: 'red',
+  textGold: {
+    color: '#ffa115',
   },
   sideBySide: {
     flexDirection: 'row',
@@ -13,6 +13,12 @@ const style = StyleSheet.create({
   buttonStyle: {
     backgroundColor: '#ffa115 !important',
     color: 'black !important',
+  },
+  whiteText: {
+    color: 'white',
+  },
+  blackText: {
+    color: 'black',
   },
 });
 export default style;

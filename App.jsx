@@ -11,6 +11,7 @@ import { Button, SafeAreaView, Text, useColorScheme, View } from 'react-native';
 import Home from './src/Screen/Home';
 import { ThemeContext } from './src/Components/common/Context/ThemeContext';
 import useToggle from './src/Components/common/CustomHooks/UseToggle';
+import About from './src/Screen/About';
 
 function App() {
   const [isDarkMode,setIsDarkMode] = useToggle(false);
@@ -37,7 +38,8 @@ function App() {
          <Button color={isDarkMode?'gold':'black'}
           title='Toggle Color' onPress={toggleTheme} backgroundColor={isDarkMode?'black':'gold'}/>
          </View>
-      <Home />
+      {/* <Home /> */}
+      <About />
     </SafeAreaView>
     </ThemeContext.Provider>
   );

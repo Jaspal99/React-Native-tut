@@ -39,8 +39,8 @@ function App() {
          <Button color={isDarkMode?'gold':'black'}
           title='Toggle Color' onPress={toggleTheme} backgroundColor={isDarkMode?'black':'gold'}/>
          </View>
-      <Home />
-      {/* <TimeOfTheDay /> */}
+      {/* <Home /> */}
+      <TimeOfTheDay />
       {/* <About /> */}
     </SafeAreaView>
     </ThemeContext.Provider>

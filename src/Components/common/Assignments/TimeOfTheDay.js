@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Text, View} from 'react-native';
 import style from '../styles/style';
+import ImageComponent from '../ImageComponent/ImageComponent';
 const TimeOfTheDay = () => {
   const nowT = new Date();
   const h = nowT.getHours();
@@ -22,7 +23,8 @@ const TimeOfTheDay = () => {
   }, []);
   return (
     <View style={style.MsgView}>
-      <Text style={style.MsgText}>{timeOfDay}</Text>
+      {/* <Text style={style.MsgText}>{timeOfDay}</Text> */}
+      <ImageComponent />
     </View>
   );
 };

@@ -13,6 +13,7 @@ import { ThemeContext } from './src/Components/common/Context/ThemeContext';
 import useToggle from './src/Components/common/CustomHooks/UseToggle';
 import About from './src/Screen/About';
 import TimeOfTheDay from './src/Components/common/Assignments/TimeOfTheDay';
+import UserInfo from './src/Components/common/Assignments/UserInfo';
 
 function App() {
   const [isDarkMode,setIsDarkMode] = useToggle(false);
@@ -27,10 +28,12 @@ function App() {
 
   return (
     <ThemeContext.Provider value={isDarkMode}>
-    <SafeAreaView style={{ 
+    <SafeAreaView 
+    style={{ 
       backgroundColor: backgroundStyle,
-      height: '100%' }}>
-         <View style={{
+      height: '100%' }}
+      >
+         {/* <View style={{
            margin:3,
            borderRadius:5,
            backgroundColor:isDarkMode?'black':'gold',
@@ -38,10 +41,11 @@ function App() {
          }}>
          <Button color={isDarkMode?'gold':'black'}
           title='Toggle Color' onPress={toggleTheme} backgroundColor={isDarkMode?'black':'gold'}/>
-         </View>
+         </View> */}
       {/* <Home /> */}
-      <TimeOfTheDay />
+      {/* <TimeOfTheDay /> */}
       {/* <About /> */}
+      <UserInfo />
     </SafeAreaView>
     </ThemeContext.Provider>
   );
